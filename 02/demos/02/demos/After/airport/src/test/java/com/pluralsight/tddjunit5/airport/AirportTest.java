@@ -3,6 +3,7 @@ package com.pluralsight.tddjunit5.airport;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AirportTest {
 
@@ -16,6 +17,7 @@ public class AirportTest {
         assertEquals(1, economyFlight.getPassengersList().size());
         assertEquals("Mike", economyFlight.getPassengersList().get(0).getName());
 
+        assertTrue(economyFlight.removePassenger(mike));
         assertEquals(true, economyFlight.removePassenger(mike));
         assertEquals(0, economyFlight.getPassengersList().size());
     }
