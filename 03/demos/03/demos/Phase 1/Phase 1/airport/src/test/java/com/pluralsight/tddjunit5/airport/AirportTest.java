@@ -79,6 +79,16 @@ public class AirportTest {
             assertEquals(1, businessFlight.getPassengersList().size());
 
         }
+        @Test
+        public void testBusinessFlightVipPassenger2() {
+            Passenger john = new Passenger("John", true);
+
+            assertEquals(false, businessFlight.addPassenger(john));
+            assertEquals(1, businessFlight.getPassengersList().size());
+            assertEquals(true, businessFlight.removePassenger(john));
+            assertEquals(1, businessFlight.getPassengersList().size());
+
+        }
 
     }
 
