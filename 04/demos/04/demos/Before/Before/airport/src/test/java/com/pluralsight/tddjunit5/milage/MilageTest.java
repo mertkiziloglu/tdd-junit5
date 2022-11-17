@@ -24,6 +24,7 @@ public class MilageTest {
     @Disabled
     @ValueSource(strings = { "1; e; Mike; false; 349", "2; b; John; true; 278",  "3; e; Mike; false; 319", "4; p; John; true; 817", "5; e; Mike; false; 623", "6; e; John; true; 978"})
     void checkGivenPoints(@ConvertWith(FlightArgumentConverter.class) Flight flight) {
+
         for (Passenger passenger: flight.getPassengersSet()) {
             milage.addMilage(passenger, flight.getDistance());
         }
@@ -32,6 +33,7 @@ public class MilageTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/flights_information.csv")
     void checkGivenPointsWithCsvInput(@ConvertWith(FlightArgumentConverter.class) Flight flight) {
+
         for (Passenger passenger: flight.getPassengersSet()) {
             milage.addMilage(passenger, flight.getDistance());
         }
