@@ -31,7 +31,7 @@ public class MilageTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/flights_information.csv")
+    @CsvFileSource(resources = "/flights_information.csv") // csv file is in
     void checkGivenPointsWithCsvInput(@ConvertWith(FlightArgumentConverter.class) Flight flight) {
 
         for (Passenger passenger: flight.getPassengersSet()) {
