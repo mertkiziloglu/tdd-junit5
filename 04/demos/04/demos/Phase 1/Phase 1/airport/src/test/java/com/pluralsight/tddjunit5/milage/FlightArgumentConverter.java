@@ -13,7 +13,7 @@ public class FlightArgumentConverter extends SimpleArgumentConverter {
         String[] flightString = source.toString().split(";");
         Flight flight = null;
 
-        switch (flightString[1].toLowerCase().trim()) {
+        switch (flightString[1].toLowerCase().trim()) { // flight type (economy, business, premium)
             case "b" : flight = new BusinessFlight(flightString[0]);
                 break;
             case "p" : flight = new PremiumFlight(flightString[0]);

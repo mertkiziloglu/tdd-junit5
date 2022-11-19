@@ -39,7 +39,7 @@ public class MilageTest {
 
     @AfterAll
     void afterAll() {
-        milage.calculateGivenPoints();
+        milage.calculateGivenPoints(); //
         assertEquals(64, milage.getPassengersPointsMap().get(new Passenger("Mike", false)).intValue());
         assertEquals(207, milage.getPassengersPointsMap().get(new Passenger("John", true)).intValue());
         System.out.println(milage.getPassengersPointsMap());
