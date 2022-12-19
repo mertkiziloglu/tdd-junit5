@@ -20,7 +20,7 @@ public class ThermometerTest {
     Sensor sensor;
 
     @Test
-    void testWorkingSensor() {
+    void testWorkingSensor() {// sensor calisiuor mu
         thermometer.setTemperature(25.0);
         when(sensor.isBlocked()).thenReturn(false);
         assertEquals(sensor, thermometer.getSensor());
