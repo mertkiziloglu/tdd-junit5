@@ -18,7 +18,7 @@ public class AirportTest {
         assertEquals("Mike", economyFlight.getPassengersList().get(0).getName());
 
         assertTrue(economyFlight.removePassenger(mike));
-        assertEquals(true, economyFlight.removePassenger(mike));
+        assertEquals(false, economyFlight.removePassenger(mike));
         assertEquals(0, economyFlight.getPassengersList().size());
     }
 
