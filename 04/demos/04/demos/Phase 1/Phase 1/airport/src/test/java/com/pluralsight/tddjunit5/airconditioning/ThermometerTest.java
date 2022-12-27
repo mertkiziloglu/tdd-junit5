@@ -14,13 +14,13 @@ import static org.mockito.Mockito.*;
 public class ThermometerTest {
 
     @InjectMocks
-    Thermometer thermometer;
+    Thermometer thermometer; // = new Thermometer();
 
     @Mock
-    Sensor sensor;
+    Sensor sensor; // = new Sensor();
 
     @Test
-    void testWorkingSensor() {// sensor calisiuor mu
+    void testWorkingSensor() {// sensor calisiyor mu
         thermometer.setTemperature(25.0);
         when(sensor.isBlocked()).thenReturn(false);
         assertEquals(sensor, thermometer.getSensor());
@@ -37,4 +37,13 @@ public class ThermometerTest {
         verify(sensor, times(1)).isBlocked();
     }
 
+
+/*    @Test
+    void shouldTrueSensorWorking(){
+        thermometer.setTemperature(25.0);
+        when(sensor.isBlocked()).thenReturn(false);
+        assertEquals(sensor,thermometer.getSensor());
+        assertEquals(25.0, thermometer.getTemperature(), 0.001);
+        verify(sensor, times(1)).isBlocked();
+    }*/
 }
