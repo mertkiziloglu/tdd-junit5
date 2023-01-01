@@ -24,7 +24,7 @@ public class StatisticsTest {
     private List<Flight> flightsList;
 
     @BeforeEach
-    void before() {
+    void before() { // simple data
         queriedData = new ArrayList<>();
         List<String> row1 = Arrays.asList("1", "e", "Mike", "false", "349");
         List<String> row2 = Arrays.asList("2", "b", "John", "true", "278");
